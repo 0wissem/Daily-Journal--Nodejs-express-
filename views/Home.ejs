@@ -1,0 +1,13 @@
+
+    <%- include ('header.ejs')%>
+
+    <h1>Home</h1>
+    <h2> to add a paragraph with a specific title, you need to access to <a href='/compose'>this page</a> and submit</h2>
+    <% for (i=0;i <  posts.length ;i++ ) {%>
+        <h2><%=posts[i].postTitle%></h2>
+        <h4><%=posts[i].content.substring(0,100)%>...  <a href='/posts/<%=posts[i].postTitle%>'>Read More</a></h4>
+        <% console.log(posts[i].postTitle)%>
+        <% } %>
+
+        <%- include ('footer.ejs')%>
+
